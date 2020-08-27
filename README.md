@@ -27,7 +27,7 @@ The images were augmented when training the models.
 
 This model scored an accuracy of **13%** over **25 epochs**. While this accuracy is low overall, it is impressive considering the simplicity of the architecture compared to the difficulty of a 133 class problem.
 
-`Net(
+Net(
   (conv1): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
   (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
   (conv3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
@@ -36,7 +36,7 @@ This model scored an accuracy of **13%** over **25 epochs**. While this accuracy
   (fc3): Linear(in_features=512, out_features=133, bias=True)
   (dropout): Dropout(p=0.25, inplace=False)
   (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
-)`
+)
 
 
 ## The Transfer Learning Model
@@ -45,7 +45,7 @@ This model scored an accuracy of **71%** over **10 epochs**. The output layer of
 
 This evidently performs far better due to its deeper architecture which was pretrained on a much larger set of images which took all forms.
 
-`VGG(
+VGG(
   (features): Sequential(
     (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
     (1): ReLU(inplace)
@@ -88,5 +88,5 @@ This evidently performs far better due to its deeper architecture which was pret
     (5): Dropout(p=0.5)
     (6): Linear(in_features=4096, out_features=133, bias=True)
   )
-)`
+)
 
